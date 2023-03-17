@@ -22,23 +22,23 @@ The apps contains 5 major components
 The Shiny app is deployed on google cloud in a kubernetes cluster running a docker image that has credentials to connect to a Bigquery dataset.
 and can be accessed at https://wild10-ypnxrsf2bq-uc.a.run.app
 
-Installation
-To run the application locally, you will need to have R/Rstudio, github, rtools, devtools.
-Simply start a new project in Rstudio and pull from myrobot2020/Wildones.
-Next press ctrl+shift+L to load all packages and files.
-Then press ctrl+shift+T to run tests ensuring dependencies are available and data is correct.
-Finally the apps is run using the function wildApp()
+Installation:
 
-The pacman package will download and load necessary packages for the application.
-The application runs on 3 datasets for UI, timeseries and mapping.
-
-
-
-Once the application is running, you will see a [insert brief description of the application interface here]. You can [insert brief description of how to use the application here].
+1. To run the application locally, you will need to have R/Rstudio, github, rtools, devtools.
+2. Simply start a new project in Rstudio and pull gitrepo  myrobot2020/Wildones.
+3. Next press ctrl+shift+L to load all packages and files.
+4. Then press ctrl+shift+T to run tests ensuring dependencies are available and data is correct.
+5. Finally the app can be run using by calling the function wildApp()
 
 About
-This Shiny application was created by [insert your name and contact information here]. If you have any questions or comments about the application, please [insert preferred method of contact here].
+This Shiny application was created by Nikhil Muthukrishnan. If you have any questions or comments about the application, please e-mail me at nikhil.exec@gmail.com.
 
 Credits
-This application was created using the [insert packages or resources used here].
 
+This application was created based on an assignment thats available in the directory.
+
+Morgan Krakow gave me the most well rounded and intersting assignment ever
+Mayank told me there'd be light at the end of the tunnel, he gave me hope
+Jayprakash gave me time and security
+Manasa, gave me peace and kept me relaxed
+Manu, kept me disciplined
