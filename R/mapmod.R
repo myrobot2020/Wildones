@@ -16,13 +16,3 @@ mapServer<-function(id){
   })
 }
 
-# mapmod <- function() {
-#   ui <- fluidPage(
-#     theUI("map1")
-#   )
-#   server <- function(input, output, session) {
-#     mapServer("map1")
-#   }
-#   shinyApp(ui, server)
-# }
-# mapmod()
