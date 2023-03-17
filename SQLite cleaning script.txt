@@ -1,0 +1,37 @@
+CREATE TABLE uioptions AS SELECT DISTINCT scientificName || ' - ' || vernacularName AS speciesName FROM occurence;
+
+CREATE TABLE m1 AS SELECT * FROM multimedia;
+ALTER TABLE m1 RENAME COLUMN CoreId TO id;
+CREATE TABLE m2 AS SELECT id,accessURI FROM m1;
+DELETE FROM m1 WHERE accessURI IS NULL;
+
+CREATE TABLE o1 AS SELECT * FROM occurence;
+ALTER TABLE o1 ADD COLUMN speciesName TEXT;
+UPDATE o1 SET speciesName =  vernacularName || ' - ' || scientificName;
+ALTER TABLE o1 ADD COLUMN eventDatetime DATETIME;
+UPDATE o1 SET eventDatetime = datetime(eventDate || ' ' || eventTime);
+
+DELETE FROM o1 WHERE speciesName IS NULL;
+
+CREATE TABLE o2 AS SELECT id,speciesName, country, eventDateconverted,individualCount, latitudeDecimal,longitudeDecimal FROM o1;
+
+CREATE TABLE o2m2 AS SELECT * FROM o2 LEFT JOIN m2 ON o2.id = m2.id;
+
+CREATE TABLE m3 AS SELECT id, speciesName, country,latitudeDecimal,longitudeDecimal,accessURI FROM o2m2 WHERE accessURI LIKE '%.jpg%';
+CREATE INDEX idx_m3_names ON m3(speciesName);
+CREATE INDEX idx_m3_access_uri ON m3(accessURI) WHERE accessURI LIKE '%.jpg%';
+
+CREATE TABLE o3 AS SELECT id,speciesName, country, eventDateconverted, individualCount FROM o2m2;
+CREATE INDEX idx_o3_names ON o3(speciesName);
+CREATE INDEX idx_o3_times ON o3(eventDateconverted);
+
+CREATE TABLE pm3 AS
+SELECT id, speciesName, country, latitudeDecimal, longitudeDecimal, accessURI
+FROM m3
+WHERE country IN ('Poland', 'France', 'Germany', 'Italy', 'Netherlands');
+CREATE INDEX idx_pm3_names ON pm3(speciesName);
+CREATE INDEX idx_pm3_acess_uri ON pm3(accessURI);
+
+CREATE TABLE po3 AS SELECT id,speciesName, country,individualCount, eventDateconverted FROM o3 WHERE country IN ('Poland', 'France', 'Germany', 'Italy', 'Netherlands');
+CREATE INDEX idx_po3_names ON po3(speciesName);
+CREATE INDEX idx_po3_times ON po3(eventDateconverted);

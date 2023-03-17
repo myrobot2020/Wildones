@@ -8,21 +8,16 @@ theUI <- function(id) {
       )
     ),
     sidebarPanel(
-      selectInput(NS(id,"type_input"), "Select type:", choices = unique(uioptions$dummytype)),
-      uiOutput(NS(id,"species_input")),
-      plotOutput(NS(id,"time"))
+      # Add a select input for selecting the species type, with choices based on the unique values in uioptions$dummytype
+      selectInput(NS(id, "type_input"), "Select type:", choices = unique(uioptions$dummytype)),
+      # Add a dynamic UI element for selecting the species based on the selected type
+      uiOutput(NS(id, "species_input")),
+      # Add a plot output for displaying a time series plot
+      plotOutput(NS(id, "time"))
     ),
     mainPanel(
+      # Add a leaflet output for displaying the map with markers
       leafletOutput("map")
     )
   )
 }
-
-# ui<-theUI("mod1")
-# server<-function(input,output,session){
-#    timeServer("mod1")
-#    mapServer("mod1")
-# }
-# shinyApp(ui,server)
-#
-

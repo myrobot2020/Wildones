@@ -1,12 +1,14 @@
-timeServer<-function(id){
-  moduleServer(id,function(input,output,session){
+timeServer <- function(id) {
+  moduleServer(id, function(input, output, session) {
+    # Create a reactive expression that filters the time data for the selected species and converts the event date to a date object
     s0 <- reactive({
-      time<-time[time$speciesName == input$a,]
-      time$eventDateconverted<-ymd(time$eventDateconverted)
+      time <- time[time$speciesName == input$a,]
+      time$eventDateconverted <- ymd(time$eventDateconverted)
       time
     })
 
-    output$time<-renderPlot({
+    # Render a ggplot time series plot based on the filtered data
+    output$time <- renderPlot({
       ggplot(data = s0(), aes(x = eventDateconverted, y = individualCount)) +
         geom_line() +
         geom_smooth(method = "lm", se = FALSE) +
