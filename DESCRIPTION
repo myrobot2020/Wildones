@@ -1,0 +1,16 @@
+Package: wild2
+Type: Package
+Title: Northern Europe Wildlife Sighting
+Version: 0.1.0
+Author: Nikhil Muthukrishnan
+Maintainer: The package maintainer <nikhil.exec@gmail.com>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 2.10)
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
