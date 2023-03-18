@@ -11,7 +11,7 @@ and finally deploying to a personal instance on a cloud provider.
 
 Biodiversity Sightings Application:
 
-This repository contains a Shiny application that performs time series visualisation and global mapping of plants,animal,insects,fish,reptile and birds. The application is designed to allow user to select plant,animal,fish etc and then select species from a based on Scientific Name or Vernacular Name. 
+This repository contains a Shiny application that performs time series visualisation and global mapping of plants,animal,insects,fish,reptile and birds. The application is designed to allow user to select plant, animal,fish etc and then select species from a based on Scientific Name or Vernacular Name. 
 The apps contains 5 major components 
 1. Time series visualisation with a trend line
 2. Leaflet map showing the geolocation of the selected species that allow has a small pop-up picture
@@ -25,7 +25,7 @@ and can be accessed at https://wild10-ypnxrsf2bq-uc.a.run.app
 Installation:
 
 1. To run the application locally, you will need to have R/Rstudio, github, rtools, devtools.
-2. Simply start a new project in Rstudio and pull gitrepo  myrobot2020/Wildones.
+2. Simply start a new project in Rstudio and pull gitrepo  https://github.com/myrobot2020/Wildones.
 3. Next press ctrl+shift+L to load all packages and files.
 4. Then press ctrl+shift+T to run tests ensuring dependencies are available and data is correct.
 5. Finally the app can be run using by calling the function wildApp()
