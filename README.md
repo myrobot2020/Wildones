@@ -2,6 +2,7 @@
 Package for Shiny app using Wildlife data
 
 This readme is for a shiny app built for a wildlife group: https://wild10-ypnxrsf2bq-uc.a.run.app
+You can watch a video presentation of it here https://youtu.be/6mJjH8XJcOI
 
 The task is to build a Shiny app that visualizes observed species on a map using biodiversity data from the Global Biodiversity Information Facility. 
 Users should be able to search for species by vernacular and scientific name, view a timeline of species observations and have a sensible default view. 
