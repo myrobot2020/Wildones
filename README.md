@@ -36,10 +36,8 @@ This Shiny application was created by Nikhil Muthukrishnan. If you have any ques
 
 Credits
 
-This application was created based on an assignment thats available in the directory.
-
-1.Morgan Krakow gave me the most well rounded and intersting assignment ever
-2.Mayank told me there'd be light at the end of the tunnel, he gave me hope
-3.Jayprakash gave me time and security
-4.Manasa, gave me peace and kept me relaxed
-5.Manu, kept me disciplined
+1. Morgan Krakow gave me the most well rounded and intersting assignment ever
+2. Mayank told me there'd be light at the end of the tunnel, he gave me hope
+3. Jayprakash gave me time and security
+4. Manasa, gave me peace and kept me relaxed
+5. Manu, kept me disciplined
