@@ -18,7 +18,7 @@ The apps contains 5 major components
 2. Leaflet map showing the geolocation of the selected species that allow has a small pop-up picture
 3. Species list dynamically rendered from type list selection
 4. Portrait image of the species displayed upfront
-5. A little joke or fact about each species collated using ChatGPT-4
+5. A muse or fact about each species collated using ChatGPT-4
 
 The Shiny app is deployed on google cloud in a kubernetes cluster running a docker image that has credentials to connect to a Bigquery dataset.
 and can be accessed at https://wild10-ypnxrsf2bq-uc.a.run.app
